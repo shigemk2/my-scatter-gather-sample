@@ -1,5 +1,10 @@
 package com.example
 
+import java.util.concurrent.TimeUnit
+import scala.concurrent._
+import scala.concurrent.duration._
+import ExecutionContext.Implicits.global
+
 import akka.actor._
 
 case class RequestForQuotation(rfqId: String, retailItems: Seq[RetailItem]) {
